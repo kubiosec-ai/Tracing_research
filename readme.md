@@ -5,6 +5,10 @@ docker run --rm -it -v ~/.mitmproxy:/home/mitmproxy/.mitmproxy -p 8080:8080 -p 1
 ```
 ### Demo app.py
 ```
+pip install llama-index-embeddings-ollama
+pip install llama-index
+```
+```
 from llama_index.embeddings.ollama import OllamaEmbedding
 
 ollama_embedding = OllamaEmbedding(
