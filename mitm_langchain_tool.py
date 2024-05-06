@@ -1,10 +1,10 @@
-from langchain_openai import ChatOpenAI
 from langchain.agents import AgentExecutor, create_react_agent
-from langchain_experimental.tools import PythonREPLTool
 from langchain_core.prompts import PromptTemplate
 from langchain_community.tools import ShellTool
 from langchain_community.llms import Ollama
 import warnings
+
+
 warnings.filterwarnings('ignore')
 
 llm = Ollama(model="phi3", base_url='http://localhost:8080')
