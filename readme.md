@@ -1,7 +1,13 @@
 # MITM 
 ### Launching MITM
 ```
-docker run --rm -it -v ~/.mitmproxy:/home/mitmproxy/.mitmproxy -p 8080:8080 -p 127.0.0.1:8081:8081 mitmproxy/mitmproxy mitmweb --web-host 0.0.0.0 --mode reverse:http://192.168.0.157:11434
+docker run --rm -it \
+    -v ~/.mitmproxy:/home/mitmproxy/.mitmproxy \
+    -p 8080:8080 \
+    -p 127.0.0.1:8081:8081 \
+    mitmproxy/mitmproxy mitmweb \
+        --web-host 0.0.0.0 \
+        --mode reverse:http://192.168.0.157:11434
 ```
 ### Demo app.py
 ```
